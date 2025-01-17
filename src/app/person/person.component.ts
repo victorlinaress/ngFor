@@ -19,7 +19,7 @@ export class PersonComponent {
 
   @Output() onPersonSelectEmitt = new EventEmitter<number>();
 
-
-selectPerson(){
-  this.onPersonSelectEmitt.emit(this.personIndex)
-}}
+  selectPerson() {
+    this.onPersonSelectEmitt.emit(this.personIndex);
+  }
+}
