@@ -4,15 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
- listPeople = [
-  {name: 'Victor', age: 21,},
-  {name: 'Victor', age: 22,},
-  {name: 'FAAS', age: 22,},
-
-
-
-  ]
+  listPeople = [
+    { name: 'Victor', age: 21 },
+    { name: 'Victor', age: 22 },
+    { name: 'FAAS', age: 22 },
+  ];
+  personSelectIndex: number | undefined;
+  
+  selectPerson(index: number) {
+    console.log(index);
+    this.personSelectIndex = index;
+  }
 }
